@@ -100,7 +100,7 @@ public class PersonService {
             throw new IllegalArgumentException("Content type cannot be empty");
         }
         if (!request.getBirthday().isBefore(LocalDate.now())) {
-            throw new IllegalArgumentException("Birthday must be earlier than today");
+            throw new IllegalArgumentException("Birthday must be earlier than current day");
         }
     }
 
