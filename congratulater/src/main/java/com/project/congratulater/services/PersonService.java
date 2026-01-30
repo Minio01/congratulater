@@ -1,5 +1,9 @@
-package com.project.congratulater;
+package com.project.congratulater.services;
 
+import com.project.congratulater.entities.BirthdayPerson;
+import com.project.congratulater.entities.BirthdayPersonRequest;
+import com.project.congratulater.entities.BirthdayPersonResponse;
+import com.project.congratulater.repositories.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -94,6 +98,9 @@ public class PersonService {
         }
         if (request.getContentType() == null || request.getContentType().isBlank()) {
             throw new IllegalArgumentException("Content type cannot be empty");
+        }
+        if (!request.getBirthday().isBefore(LocalDate.now())) {
+            throw new IllegalArgumentException("Birthday must be earlier than today");
         }
     }
 

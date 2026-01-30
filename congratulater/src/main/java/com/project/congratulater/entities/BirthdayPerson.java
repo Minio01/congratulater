@@ -1,4 +1,4 @@
-package com.project.congratulater;
+package com.project.congratulater.entities;
 
 import jakarta.persistence.*;
 

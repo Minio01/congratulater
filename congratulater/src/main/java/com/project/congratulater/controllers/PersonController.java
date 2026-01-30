@@ -1,5 +1,8 @@
-package com.project.congratulater;
+package com.project.congratulater.controllers;
 
+import com.project.congratulater.services.PersonService;
+import com.project.congratulater.entities.BirthdayPersonRequest;
+import com.project.congratulater.entities.BirthdayPersonResponse;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
