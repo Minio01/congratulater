@@ -11,14 +11,18 @@ public class BirthdayPerson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "birthday")
     private LocalDate birthday;
+
     @Lob
     @Column(name ="photo")
     private String photoBase64;
 
+    @Column(name = "content-type")
     private String contentType;
 
     public BirthdayPerson() {}

@@ -30,6 +30,9 @@ public class PersonController {
             @RequestBody @Valid BirthdayPersonRequest personRequest
     ) {
         log.info("Called createPerson");
+        log.info("DTO name = {}", personRequest.getName());
+        log.info("DTO photo = {}", personRequest.getPhotoBase64());
+
         return ResponseEntity.ok(personService.createPerson(personRequest));
     }
 
